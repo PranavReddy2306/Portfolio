@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kandi Pranav Reddy - Premium Full Stack Developer Portfolio. Specializing in Node.js, React, Python, and Data Science.">
+    <title>Kandi Pranav Reddy | Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glows -->
+    <div class="ambient-glows">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="glow-3"></div>
+    </div>
+
+    <!-- Canvas Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Pranav<span class="gradient-text">Reddy</span><span class="logo-dot"></span>
+            </a>
+            
+            <button class="mobile-nav-toggle" id="menu-btn" aria-label="Toggle Menu">
+                <!-- Hamburger Icon SVG -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+            </button>
+            
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="hero-badge-pulse"></span>
+                    Available for Full-time Opportunities
+                </div>
+                <h1 class="hero-title reveal reveal-delay-1">
+                    Hi, I'm <span class="gradient-text name">Kandi Pranav Reddy</span>
+                </h1>
+                <div class="hero-subtitle reveal reveal-delay-2">
+                    I am a <span id="typed-text"></span><span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-desc reveal reveal-delay-3">
+                    A dynamic Full Stack Developer specializing in building high-performance web applications, automating business logic using Python, and mentoring future developers in computer science domains.
+                </p>
+                <div class="hero-actions reveal reveal-delay-3">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+                
+                <div class="hero-socials reveal reveal-delay-3">
+                    <a href="https://www.linkedin.com/in/pranavreddykandi/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/PranavReddy2306" target="_blank" class="social-btn" aria-label="GitHub">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal">
+                <div class="visual-orbit orbit-1"></div>
+                <div class="visual-orbit orbit-2"></div>
+                <div class="profile-hex-container">
+                    <div class="profile-hex-inner">
+                        <!-- Loaded if photo is placed locally -->
+                        <img src="profile.jpg" alt="Kandi Pranav Reddy" class="profile-img" onerror="this.style.display='none'; document.getElementById('svg-avatar').style.display='block';">
+                        
+                        <!-- High Fidelity Futuristic Hologram SVG Fallback -->
+                        <svg id="svg-avatar" style="display:none;" viewBox="0 0 100 100" class="profile-img fallback">
+                            <defs>
+                                <linearGradient id="svg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#6366f1" />
+                                    <stop offset="100%" stop-color="#06b6d4" />
+                                </linearGradient>
+                                <radialGradient id="glow-grad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3" />
+                                    <stop offset="100%" stop-color="#070a13" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
+                            
+                            <!-- Glowing Aura Background -->
+                            <circle cx="50" cy="50" r="45" fill="url(#glow-grad)" />
+                            
+                            <!-- Stylized Circuit Board Tracks -->
+                            <path d="M15 50 H 30 M 70 50 H 85 M 50 15 V 30 M 50 75 V 90" stroke="rgba(99, 102, 241, 0.25)" stroke-width="1" stroke-dasharray="2 2" />
+                            <circle cx="30" cy="50" r="1.5" fill="#06b6d4" />
+                            <circle cx="70" cy="50" r="1.5" fill="#06b6d4" />
+                            <circle cx="50" cy="30" r="1.5" fill="#a855f7" />
+                            
+                            <!-- Core Holographic Avatar Silhouette -->
+                            <!-- Shoulders -->
+                            <path d="M 25 82 C 30 70, 70 70, 75 82 Z" fill="rgba(99, 102, 241, 0.15)" stroke="url(#svg-gradient)" stroke-width="1.5" />
+                            
+                            <!-- Neck -->
+                            <path d="M 45 68 L 45 74 L 55 74 L 55 68 Z" fill="rgba(99, 102, 241, 0.2)" stroke="url(#svg-gradient)" stroke-width="1" />
+                            
+                            <!-- Face -->
+                            <path d="M 37 45 C 37 32, 63 32, 63 45 C 63 56, 61 65, 50 65 C 39 65, 37 56, 37 45 Z" fill="rgba(13, 20, 38, 0.9)" stroke="url(#svg-gradient)" stroke-width="2" />
+                            
+                            <!-- Tech Glasses -->
+                            <path d="M 40 43 L 47 43 L 49 45 L 51 45 L 53 43 L 60 43 C 62 43, 62 48, 60 48 L 54 48 C 52 48, 51 46, 50 46 C 49 46, 48 48, 46 48 L 40 48 C 38 48, 38 43, 40 43 Z" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="1" />
+                            <line x1="43" y1="45" x2="47" y2="45" stroke="#fff" stroke-width="0.5" opacity="0.8" />
+                            <line x1="53" y1="45" x2="57" y2="45" stroke="#fff" stroke-width="0.5" opacity="0.8" />
+                            
+                            <!-- Stylish Developer Hair -->
+                            <path d="M 36 41 C 34 32, 40 25, 50 25 C 60 25, 66 32, 64 41 C 61 38, 59 36, 56 36 C 53 36, 51 39, 49 39 C 47 39, 45 37, 43 37 C 40 37, 38 39, 36 41 Z" fill="url(#svg-gradient)" />
+                            
+                            <!-- Floating Code Bits -->
+                            <text x="22" y="35" fill="#06b6d4" font-size="5" font-family="monospace" opacity="0.7">{ }</text>
+                            <text x="68" y="35" fill="#a855f7" font-size="5" font-family="monospace" opacity="0.7">&lt;/&gt;</text>
+                            <text x="73" y="60" fill="#6366f1" font-size="4" font-family="monospace" opacity="0.5">py</text>
+                            <text x="18" y="60" fill="#6366f1" font-size="4" font-family="monospace" opacity="0.5">js</text>
+                        </svg>
+                        
+                        <div class="hologram-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>About Me</h2>
+                <p>An ambitious developer bridging design, engineering, and data insights</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h3>Empowering Businesses & Mentoring Minds</h3>
+                    <p>
+                        I am a Computer Science Engineering graduate from GITAM University (Class of 2025). As a software engineer, I enjoy building high-fidelity products that solve critical real-world problems. My experience ranges from crafting dynamic web portals with high UX sensitivity to optimizing workflow backends using robust Python solutions.
+                    </p>
+                    <p>
+                        Beyond traditional engineering, I possess a deep passion for teaching. Serving as a Teaching Assistant at Vignan University, I've mentored B.Tech students in Frontend Development, Python, and Data Science, translating complex structures into simple, digestible knowledge.
+                    </p>
+                </div>
+                
+                <div class="about-focus reveal reveal-delay-1">
+                    <div class="glass-card focus-card">
+                        <div class="focus-icon">
+                            <!-- Code Icon SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h4>Frontend Dev</h4>
+                        <p>High-UX responsive interfaces with React, modern JS & custom styling systems.</p>
+                    </div>
+                    
+                    <div class="glass-card focus-card">
+                        <div class="focus-icon">
+                            <!-- Database Icon SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+                        </div>
+                        <h4>Backend & APIs</h4>
+                        <p>Scalable business architectures using Node.js, routing, and data managers.</p>
+                    </div>
+                    
+                    <div class="glass-card focus-card">
+                        <div class="focus-icon">
+                            <!-- Bar Chart Icon SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <h4>Data Science</h4>
+                        <p>Python-driven sentiment models, data analysis, and predictive workflows.</p>
+                    </div>
+                    
+                    <div class="glass-card focus-card">
+                        <div class="focus-icon">
+                            <!-- Users Icon SVG -->
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h4>Technical Mentor</h4>
+                        <p>Facilitating active-learning sessions, debugging codebases, and coaching teams.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card stats-banner reveal">
+                <div class="stat-item">
+                    <h4 class="gradient-text">5+</h4>
+                    <p>Projects Interned</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="gradient-text">30%</h4>
+                    <p>Efficiency Gain</p>
+                </div>
+                <div class="stat-item">
+                    <h4 class="gradient-text">100+</h4>
+                    <p>Students Coached</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Technical Toolkit</h2>
+                <p>Technologies I master to engineer solutions and build software architectures</p>
+            </div>
+            
+            <div class="skills-categories">
+                <!-- Category 1: Languages -->
+                <div class="glass-card skill-category-card reveal">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        Languages
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML / CSS</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 2: Tools & Frameworks -->
+                <div class="glass-card skill-category-card reveal reveal-delay-1">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Frameworks & Tools
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js / Express</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Science (Pandas/NumPy)</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 3: Core Competencies -->
+                <div class="glass-card skill-category-card reveal reveal-delay-2">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        Core Competencies
+                    </h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Full Stack Development</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Frontend Architecture</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Application Engineering</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Teaching & Lecturing</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-track">
+                                <div class="skill-bar" data-percent="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Academic & Professional Timeline</h2>
+                <p>A history of continuous learning, impactful engineering, and leadership</p>
+            </div>
+            
+            <div class="timeline-grid">
+                <!-- Column 1: Experience -->
+                <div class="timeline-column reveal">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        Professional Experience
+                    </h3>
+                    
+                    <div class="timeline-wrapper">
+                        <!-- TA Vignan -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">Teaching Assistant</h4>
+                                    <span class="timeline-company">Vignan University</span>
+                                </div>
+                                <span class="timeline-duration">2025 - 2026</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Co-instructed undergraduate courses, focusing on simplifying Frontend paradigms and Python for Data Analysis.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Assisted in teaching Frontend Development and Python & Data Science to B.Tech students.</li>
+                                <li>Guided students in hands-on projects involving HTML, CSS, JavaScript, and Python data analysis.</li>
+                                <li>Supported faculty in preparing course materials, assignments, and practical sessions.</li>
+                                <li>Mentored students in debugging code, improving problem-solving skills, and understanding core concepts.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Python Dev Eduvetha -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">Python Developer</h4>
+                                    <span class="timeline-company">Eduvetha</span>
+                                </div>
+                                <span class="timeline-duration">2024</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Engineered real-world Python utilities focused on structural data tasks and operations.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Eduvetha focuses on teaching Python through real-world projects and case studies.</li>
+                                <li>Developed Python applications, improving overall business operations and execution efficiency by 30%.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Oasis Web Dev -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">Web Developer Intern</h4>
+                                    <span class="timeline-company">Oasis Infobyte</span>
+                                </div>
+                                <span class="timeline-duration">2024</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Participated in product developments within a dynamic tech service agency.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Completed 5 fully-functional web projects during the course of the internship.</li>
+                                <li>Specialized in interactive web templates and scalable brand-oriented client solutions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Education -->
+                <div class="timeline-column reveal reveal-delay-1">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                        Education Path
+                    </h3>
+                    
+                    <div class="timeline-wrapper">
+                        <!-- B.Tech -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">B.Tech, Computer Science</h4>
+                                    <span class="timeline-company">GITAM University, Hyderabad</span>
+                                </div>
+                                <span class="timeline-duration">Class of 2025</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Specialized in core computer science elements, algorithmic models, software design, and data structures.
+                            </p>
+                        </div>
+                        
+                        <!-- Intermediate -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">Intermediate, MPC</h4>
+                                    <span class="timeline-company">Narayana Group</span>
+                                </div>
+                                <span class="timeline-duration">2019 - 2021</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Graduated with core concentration in Mathematics, Physics, and Chemistry.
+                            </p>
+                        </div>
+                        
+                        <!-- School -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-header">
+                                <div>
+                                    <h4 class="timeline-role">Secondary School (SSC)</h4>
+                                    <span class="timeline-company">Santhi Nikethan Talent School</span>
+                                </div>
+                                <span class="timeline-duration">Graduated 2019</span>
+                            </div>
+                            <p class="timeline-desc">
+                                Completed matriculation with excellence, focusing on analytical basics and problem-solving skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Featured Projects</h2>
+                <p>A handpicked showcase of architectures and systems built using modern toolchains</p>
+            </div>
+            
+            <!-- Category Filter Bar -->
+            <div class="portfolio-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="python">Python / Data Science</button>
+            </div>
+            
+            <!-- Grid -->
+            <div class="projects-grid">
+                
+                <!-- Project 1: Sentiment Analysis -->
+                <div class="glass-card project-card reveal" data-category="python" data-project-id="sentiment-analysis">
+                    <div class="project-media">
+                        <div class="project-media-gradient"></div>
+                        <!-- Custom SVG Tech Graphic -->
+                        <svg class="project-graphic-fallback" viewBox="0 0 100 100">
+                            <rect x="25" y="25" width="50" height="50" rx="10" fill="none" stroke="#a855f7" stroke-width="2" />
+                            <circle cx="50" cy="50" r="15" fill="rgba(168, 85, 247, 0.15)" stroke="#06b6d4" stroke-width="1.5" />
+                            <path d="M 40 50 L 60 50 M 50 40 L 50 60" stroke="#f8fafc" stroke-width="1.5" />
+                            <circle cx="35" cy="35" r="3" fill="#6366f1" />
+                            <circle cx="65" cy="65" r="3" fill="#6366f1" />
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Science</span>
+                            <span class="project-tag">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">Multimodal Sentiment Analysis</h3>
+                        <p class="project-excerpt">
+                            An advanced sentiment engine integrating textual semantics, acoustic inflections, and micro-expression visual tracking for unified emotion mapping.
+                        </p>
+                        <span class="project-cta">
+                            Explore Details
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Canteen Website -->
+                <div class="glass-card project-card reveal reveal-delay-1" data-category="fullstack" data-project-id="canteen-website">
+                    <div class="project-media">
+                        <div class="project-media-gradient"></div>
+                        <!-- Custom SVG Tech Graphic -->
+                        <svg class="project-graphic-fallback" viewBox="0 0 100 100">
+                            <rect x="20" y="30" width="60" height="40" rx="6" fill="none" stroke="#6366f1" stroke-width="2" />
+                            <line x1="30" y1="70" x2="70" y2="70" stroke="#6366f1" stroke-width="3" />
+                            <path d="M 35 45 H 65 M 35 55 H 55" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="70" cy="55" r="4" fill="#a855f7" />
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML & CSS</span>
+                            <span class="project-tag">Database</span>
+                        </div>
+                        <h3 class="project-title">Vignan's Canteen Portal</h3>
+                        <p class="project-excerpt">
+                            A complete, client-server food management utility developed to simplify product browsing, shopping lists, and real-time student ordering queues.
+                        </p>
+                        <span class="project-cta">
+                            Explore Details
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Project 3: CRIMEShield Suite -->
+                <div class="glass-card project-card reveal reveal-delay-2" data-category="fullstack python" data-project-id="crimeshield-suite">
+                    <div class="project-media">
+                        <div class="project-media-gradient"></div>
+                        <!-- Custom SVG Tech Graphic -->
+                        <svg class="project-graphic-fallback" viewBox="0 0 100 100">
+                            <!-- Shield Outline -->
+                            <path d="M 30 20 L 50 10 L 70 20 C 70 50, 50 80, 50 80 C 50 80, 30 50, 30 20 Z" fill="none" stroke="#6366f1" stroke-width="2" />
+                            <!-- Grid / Radar grid inside -->
+                            <path d="M 35 35 H 65 M 32 48 H 68 M 35 60 H 65" stroke="rgba(6, 182, 212, 0.15)" stroke-width="1.5" />
+                            <path d="M 40 25 V 70 M 50 15 V 77 M 60 25 V 70" stroke="rgba(6, 182, 212, 0.15)" stroke-width="1.5" />
+                            <!-- Hotspot pulses -->
+                            <circle cx="50" cy="40" r="7" fill="rgba(239, 68, 68, 0.25)" stroke="#ef4444" stroke-width="1" />
+                            <circle cx="50" cy="40" r="2" fill="#ef4444" />
+                            <circle cx="42" cy="55" r="5" fill="rgba(249, 115, 22, 0.25)" stroke="#f97316" stroke-width="1" />
+                            <circle cx="42" cy="55" r="1.5" fill="#f97316" />
+                            <circle cx="58" cy="52" r="6" fill="rgba(249, 115, 22, 0.25)" stroke="#f97316" stroke-width="1" />
+                            <circle cx="58" cy="52" r="1.5" fill="#f97316" />
+                            <!-- Connections representing K-Means clustering -->
+                            <path d="M 50 40 L 42 55 M 50 40 L 58 52" stroke="#06b6d4" stroke-width="1.2" stroke-dasharray="2 2" />
+                        </svg>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Tailwind CSS</span>
+                            <span class="project-tag">Leaflet Maps</span>
+                            <span class="project-tag">Python Flask</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Machine Learning</span>
+                        </div>
+                        <h3 class="project-title">CRIMEShield Suite</h3>
+                        <p class="project-excerpt">
+                            A real-time crime data visualization and predictive analytics platform incorporating ML hotspot detection and regression-based trend forecasting.
+                        </p>
+                        <span class="project-cta">
+                            Explore Details
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Let's Collaborate</h2>
+                <p>Have an interesting project, dynamic opportunity, or teaching platform in mind?</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info-column reveal">
+                    <h3 class="contact-card-title">Direct Connection</h3>
+                    <p class="contact-card-desc">
+                        Feel free to reach out via direct phone lines, emails, or LinkedIn. I am always excited to discuss software engineering, tutoring frameworks, and new technical setups.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <!-- Phone -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Call / WhatsApp</h5>
+                                <p>+91 95059 33978</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Write Email</h5>
+                                <p>pranavreddy690@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Current Location</h5>
+                                <p>Hyderabad, TS, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Column -->
+                <div class="glass-card contact-form-card reveal reveal-delay-1">
+                    <form class="contact-form" id="portfolio-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" id="user-name" class="form-input" placeholder=" " required>
+                            <label for="user-name" class="form-label">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="user-email" class="form-input" placeholder=" " required>
+                            <label for="user-email" class="form-label">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group form-group-full">
+                            <input type="text" id="msg-subject" class="form-input" placeholder=" " required>
+                            <label for="msg-subject" class="form-label">Subject Topic</label>
+                        </div>
+                        
+                        <div class="form-group form-group-full">
+                            <textarea id="msg-body" class="form-input" placeholder=" " required></textarea>
+                            <label for="msg-body" class="form-label">Message Details</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary form-group-full" style="width: 100%;" id="submit-btn">
+                            Send Message
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="#" class="logo">
+                Pranav<span class="gradient-text">Reddy</span><span class="logo-dot"></span>
+            </a>
+            
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <p class="copyright">
+                &copy; 2026 Kandi Pranav Reddy. Handcrafted with precision. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="scroll-top-btn" id="scroll-to-top" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Interactive Modal Container -->
+    <div class="project-modal" id="project-details-modal">
+        <div class="modal-overlay" id="modal-overlay-bg"></div>
+        <div class="modal-container glass-card">
+            <button class="modal-close-btn" id="modal-close-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-content-wrapper">
+                <div class="modal-media">
+                    <div class="modal-media-gradient"></div>
+                    <!-- Dynamically Updated Graphic -->
+                    <div id="modal-graphic-target"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tags" id="modal-tags-target"></div>
+                    <h3 class="modal-title" id="modal-title-target">Project Title</h3>
+                    <p class="modal-desc" id="modal-desc-target">Detailed description goes here...</p>
+                    
+                    <h4 class="modal-features-title">Technical Accomplishments</h4>
+                    <ul class="modal-features" id="modal-features-target">
+                        <!-- Injected by JavaScript -->
+                    </ul>
+                    
+                    <div class="modal-links">
+                        <a href="#" class="btn btn-primary" id="modal-link-live" target="_blank" style="display:none;">
+                            Visit Live
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                        <a href="#" class="btn btn-secondary" id="modal-link-source" target="_blank" style="display:none;">
+                            Source Code
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast Notification Container -->
+    <div class="toast-container" id="toaster"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
