@@ -509,7 +509,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (e.key === 'Escape') closeModal();
     });
 
-
     // --- 8. TRANSLUCENT FORM HANDLING & TOAST FEEDBACK ---
     const contactForm = document.getElementById('portfolio-form');
     const toaster = document.getElementById('toaster');
